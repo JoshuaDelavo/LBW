@@ -1,4 +1,8 @@
-<?php include 'corona.php'; ?>
+<?php
+include 'corona.php'; 
+$page = "Home";
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -12,28 +16,7 @@
     <title>Corona</title>
   </head>
   <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Corona Virus Data</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-        <li class="nav-item active">
-            <a class="nav-link" href="#">Beranda <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Grafik</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Rumah Sakit</a>
-        </li>
-        <!-- <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li> -->
-        </ul>
-    </div>
-    </nav>
+  <?php include 'header.php'; ?>
     
     <main role="main" class="flex-shrink-0">
         <div class="container">
