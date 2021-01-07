@@ -5,18 +5,6 @@ $page = "Hospital";
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<style>
-    table{
-        margin: 5px;
-    }
-    table, th, td {
-        border: 1px solid black;
-        border-collapse: collapse;
-    }
-    th{
-        text-transform: uppercase;
-    }
-</style>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -56,9 +44,40 @@ $page = "Hospital";
         $html .= '</table>';
         return $html;
     }
-    echo build_table($res);
+    //echo build_table($res);
 
 ?>
+
+<div class="row mt-5 mb-5 mx-3"> 
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">NO</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Region</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Province</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php 
+                $no=1;
+                foreach ($res as $rows) { ?>
+                <tr>
+                    <th scope="row"><?php  echo $no;?></th>
+                    <td><?php echo $rows->name;?></td>
+                    <td><?php echo $rows->address;?></td>
+                    <td><?php echo $rows->region;?></td>
+                    <td><?php echo $rows->phone;?></td>
+                    <td><?php echo $rows->province;?></td>
+                </tr>
+                <?php 
+                $no++;
+            } ?>
+            </tbody>
+            </table>
+</div> 
 
 </body>
 </html>
