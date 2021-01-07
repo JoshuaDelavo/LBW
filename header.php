@@ -11,8 +11,8 @@
         <li class="nav-item  <?php if($page == "Grafik") echo " active";?>">
             <a class="nav-link" href="grafik.php">Grafik</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Rumah Sakit</a>
+        <li class="nav-item <?php if($page == "Hospital") echo " active";?>">
+            <a class="nav-link" href="hospital.php">Rumah Sakit</a>
         </li>
         <!-- <li class="nav-item">
             <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
