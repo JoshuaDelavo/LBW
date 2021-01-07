@@ -48,7 +48,7 @@ $page = "Hospital";
 
 ?>
 
-<div class="row mt-5 mb-5 mx-3"> 
+<div class="row mt-5 mb-5 mx-5"> 
         <table class="table table-striped">
             <thead>
                 <tr>
