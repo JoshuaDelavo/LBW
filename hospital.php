@@ -54,7 +54,7 @@ $page = "Hospital";
 ?>
 
 <div class="container"> 
-    <table id="example" class="table table-striped ">
+    <table id="example" class="table table-striped">
         <thead>
             <tr>
                 <th scope="col">NO</th>
