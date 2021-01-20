@@ -17,19 +17,65 @@ $page = "Home";
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/fixedheader/3.1.7/css/fixedHeader.bootstrap.min.css">
     <link rel="stylesheet" href=" https://cdn.datatables.net/responsive/2.2.6/css/responsive.bootstrap.min.css">
+    
+    
     <title>Corona</title>
   </head>
   <body>
   <?php include 'header.php'; ?>
-    
-  <main role="main" class="flex-shrink-0">
-        <div class="jumbotron text-center">
-                    <h1>SEBARAN COVID19</h1>
+
+<!-- slider -->
+    <div class="container-fluid">
+		<div data-ride="carousel" class="carousel slide" id="carousel">
+			<ul class="carousel-indicators">
+				<li data-slide-to="0" class="active" data-target="#carousel"></li>
+				<li data-slide-to="1" data-target="#carousel"></li>
+				<li data-slide-to="2" data-target="#carousel"></li>
+			</ul>
+			<div class="carousel-inner">
+				<div class="active carousel-item">
+                    <a href="index.php">
+                        <img alt="Slide1" src="img/Gambar1.png" style="width: 1500px; height:560px">
+                        <!-- <div class="carousel-caption">
+                            <h2>Slide 1</h2>
+                        </div> -->
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="grafik.php">
+                        <img alt="Slide2" src="img/Gambar2.jpg" style="width: 1500px; height:560px">
+                        <!-- <div class="carousel-caption">
+                            <h2>Slide 2</h2>
+                        </div> -->
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="hospital.php">
+                        <img alt="Slide3" src="img/Gambar3.jpg" style="width: 1500px; height:560px">
+                        <!-- <div class="carousel-caption">
+                            <h2>Slide 3</h2>
+                        </div> -->
+                    </a>
+                </div>
+            </div>
+            <a href="#carousel" class="carousel-control-prev" data-slide="prev">
+                Prev
+            </a>
+            <a href="#carousel" class="carousel-control-next" data-slide="next">
+                Next
+            </a>
         </div>
+    </div>
+<!-- slider -->
+
+  <main role="main" class="flex-shrink-0">
+        <!-- <div class="jumbotron text-center">
+                    <h1>SEBARAN COVID19</h1>
+        </div> -->
         
         <div class="container">
-
-            <h6>GLOBAL</h6>
+            <br>
+            <h3><b>GLOBAL</b></h3>
             <hr/>
             <div class="row mb-5"> 
                 <div class="col-sm-4">
@@ -82,7 +128,7 @@ $page = "Home";
                 </div>
             </div> 
 
-            <h6>INDONESIA</h6>
+            <h3><b>INDONESIA</b></h3>
             <hr/>
             <div class="row mt-5 mb-5"> 
                 <div class="col-sm-4">
@@ -135,33 +181,33 @@ $page = "Home";
                 </div>
             </div>
 
-            <h6>PROVINSI</h6>
+            <h3><b>PROVINSI</b></h3>
             <hr/>
             <div class="col-md-10"> 
-            <table id="example" class="table table-striped table-bordered nowrap" style="width:126%">
-            <thead>
-                <tr>
-                    <th scope="col">NO</th>
-                    <th scope="col">Provinsi</th>
-                    <th scope="col">Positif</th>
-                    <th scope="col">Sembuh</th>
-                    <th scope="col">Meninggal</th>
-                </tr>
-            </thead>
-            <tbody>
+                <table id="example" class="table table-striped table-bordered nowrap" style="width:126%">
+                <thead>
+                    <tr>
+                        <th scope="col">NO</th>
+                        <th scope="col">Provinsi</th>
+                        <th scope="col">Positif</th>
+                        <th scope="col">Sembuh</th>
+                        <th scope="col">Meninggal</th>
+                    </tr>
+                </thead>
+                <tbody>
                 <?php 
-                $no=1;
-                foreach ($data_prov as $rows) { ?>
-                <tr>
-                    <th scope="row"><?php  echo $no;?></th>
-                    <td><?php echo $rows->attributes->Provinsi;?></td>
-                    <td><?php echo $rows->attributes->Kasus_Posi;?></td>
-                    <td><?php echo $rows->attributes->Kasus_Semb;?></td>
-                    <td><?php echo $rows->attributes->Kasus_Meni;?></td>
-                </tr>
+                    $no=1;
+                    foreach ($data_prov as $rows) { ?>
+                    <tr>
+                        <th scope="row"><?php  echo $no;?></th>
+                        <td><?php echo $rows->attributes->Provinsi;?></td>
+                        <td><?php echo $rows->attributes->Kasus_Posi;?></td>
+                        <td><?php echo $rows->attributes->Kasus_Semb;?></td>
+                        <td><?php echo $rows->attributes->Kasus_Meni;?></td>
+                    </tr>
                 <?php 
                 $no++;
-            } ?>
+                } ?>
             </tbody>
             </table>
             </div> 
@@ -399,6 +445,19 @@ $page = "Home";
     <script src="https://cdn.datatables.net/fixedheader/3.1.7/js/dataTables.fixedHeader.min.js"></script>
     <script src="https://cdn.datatables.net/responsive/2.2.6/js/dataTables.responsive.min.js"></script>
     <script src="https://cdn.datatables.net/responsive/2.2.6/js/responsive.bootstrap.min.js  "></script>
+
+    <!-- Slider -->
+    
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+	 crossorigin="anonymous">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+	 crossorigin="anonymous">
+	</script>
+	<script type="text/javascript" src="scripts.js">
+	</script>
+    <!-- Slider -->
 
     <script>
         $(document).ready(function() {

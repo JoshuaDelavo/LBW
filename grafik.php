@@ -47,7 +47,7 @@ $url_global="https://api.kawalcorona.com/";
 
 ?>
 
-
+<br>
 <script>
 window.onload = function() {
 var chart = new CanvasJS.Chart("chartContainer", {
