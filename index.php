@@ -1,8 +1,3 @@
-<?php
-include 'corona.php'; 
-$page = "Home";
-?>
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -19,10 +14,14 @@ $page = "Home";
     <link rel="stylesheet" href=" https://cdn.datatables.net/responsive/2.2.6/css/responsive.bootstrap.min.css">
     
     
-    <title>Corona</title>
+    <title>Beranda</title>
   </head>
   <body>
-  <?php include 'header.php'; ?>
+    <?php
+    include 'corona.php'; 
+    $page = "Home";
+    include 'header.php';
+    ?>
 
 <!-- slider -->
     <div class="container-fluid">
@@ -31,6 +30,7 @@ $page = "Home";
 				<li data-slide-to="0" class="active" data-target="#carousel"></li>
 				<li data-slide-to="1" data-target="#carousel"></li>
 				<li data-slide-to="2" data-target="#carousel"></li>
+                <li data-slide-to="3" data-target="#carousel"></li>
 			</ul>
 			<div class="carousel-inner">
 				<div class="active carousel-item">
@@ -52,6 +52,14 @@ $page = "Home";
                 <div class="carousel-item">
                     <a href="hospital.php">
                         <img alt="Slide3" src="img/Gambar3.jpg" style="width: 1500px; height:560px">
+                        <!-- <div class="carousel-caption">
+                            <h2>Slide 3</h2>
+                        </div> -->
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="">
+                        <img alt="Slide4" src="img/Gambar4.jpg" style="width: 1500px; height:560px">
                         <!-- <div class="carousel-caption">
                             <h2>Slide 3</h2>
                         </div> -->

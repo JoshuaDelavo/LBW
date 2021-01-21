@@ -15,6 +15,9 @@
         <li class="nav-item <?php if($page == "Hospital") echo " active";?>">
             <a class="nav-link" href="hospital.php" style="margin-left: 30px;"><h4><b>Rumah Sakit</b></h4></a>
         </li>
+        <li class="nav-item <?php if($page == "Info") echo " active";?>">
+            <a class="nav-link" href="info.php" style="margin-left: 30px;"><h4><b>Info</b></h4></a>
+        </li>
         <!-- <li class="nav-item">
             <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
         </li> -->
